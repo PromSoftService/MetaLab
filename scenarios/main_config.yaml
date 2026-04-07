@@ -1,0 +1,545 @@
+tags_out:
+  DI_K31_bOverheating:
+    node_id: ns=3;s="DI_K31_bOverheating"
+    data_type: BOOL
+    description: Перегрев насоса системы отопления К31
+    access_level: 3
+    value: true
+  DI_K32_bOverheating:
+    node_id: ns=3;s="DI_K32_bOverheating"
+    data_type: BOOL
+    description: Перегрев насоса системы отопления К32
+    access_level: 3
+    value: true
+  DI_K3_bDiff:
+    node_id: ns=3;s="DI_K3_bDiff"
+    data_type: BOOL
+    description: Контроль насосов системы отопления К3
+    access_level: 3
+    value: false
+  DI_K3_bDried:
+    node_id: ns=3;s="DI_K3_bDried"
+    data_type: BOOL
+    description: Защита насосов К3 от "сухого хода"
+    access_level: 3
+    value: true
+  DI_B1_bDried:
+    node_id: ns=3;s="DI_B1_bDried"
+    data_type: BOOL
+    description: Контроль давления воды в водопроводе В1
+    access_level: 3
+    value: true
+  DI_K4_bDiff:
+    node_id: ns=3;s="DI_K4_bDiff"
+    data_type: BOOL
+    description: Контроль насосов системы вентиляции К4
+    access_level: 3
+    value: true
+  DI_K4_bDried:
+    node_id: ns=3;s="DI_K4_bDried"
+    data_type: BOOL
+    description: Защита насосов К4 от "сухого хода"
+    access_level: 3
+    value: true
+  DI_T24_Pipeline_bFlow:
+    node_id: ns=3;s="DI_T24_Pipeline_bFlow"
+    data_type: BOOL
+    description: Расход в обратном трубо-проводе вентиляц. Т24
+    access_level: 3
+    value: false
+  DI_T2_Pipeline_bFlow:
+    node_id: ns=3;s="DI_T2_Pipeline_bFlow"
+    data_type: BOOL
+    description: Расход в обратном общем труб. Отопления Т2
+    access_level: 3
+    value: false
+  DI_T21_Pipeline_bFlow:
+    node_id: ns=3;s="DI_T21_Pipeline_bFlow"
+    data_type: BOOL
+    description: Расход в обратном трубопроводе отопления Т21
+    access_level: 3
+    value: false
+  DI_T22_Pipeline_bFlow:
+    node_id: ns=3;s="DI_T22_Pipeline_bFlow"
+    data_type: BOOL
+    description: Расход в обратном трубопроводе отопления Т22
+    access_level: 3
+    value: false
+  DI_T23_Pipeline_bFlow:
+    node_id: ns=3;s="DI_T23_Pipeline_bFlow"
+    data_type: BOOL
+    description: Расход в обратном трубопроводе отопления Т23
+    access_level: 3
+    value: false
+  DI_B1_Pipeline_bFlow:
+    node_id: ns=3;s="DI_B1_Pipeline_bFlow"
+    data_type: BOOL
+    description: Расход в водопроводе В1
+    access_level: 3
+    value: false
+  DI_UF1_bFault:
+    node_id: ns=3;s="DI_UF1_bFault"
+    data_type: BOOL
+    description: Авария ЧРП 1
+    access_level: 3
+    value: true
+  DI_UF2_bFault:
+    node_id: ns=3;s="DI_UF2_bFault"
+    data_type: BOOL
+    description: Авария ЧРП 2
+    access_level: 3
+    value: true
+  DI_KA1_bInput:
+    node_id: ns=3;s="DI_KA1_bInput"
+    data_type: BOOL
+    description: хз 1
+    access_level: 3
+    value: false
+  DI_KA2_bInput:
+    node_id: ns=3;s="DI_KA2_bInput"
+    data_type: BOOL
+    description: хз 2
+    access_level: 3
+    value: false
+  DI_bPowerControl:
+    node_id: ns=3;s="DI_bPowerControl"
+    data_type: BOOL
+    description: Контроль питания 400В
+    access_level: 3
+    value: true
+  DI_UG1_bControl:
+    node_id: ns=3;s="DI_UG1_bControl"
+    data_type: BOOL
+    description: Контроль питания 24В БП1
+    access_level: 3
+    value: true
+  DI_UG2_bControl:
+    node_id: ns=3;s="DI_UG2_bControl"
+    data_type: BOOL
+    description: Контроль питания 24В БП2
+    access_level: 3
+    value: true
+  DI_bRezerv_1:
+    node_id: ns=3;s="DI_bRezerv_1"
+    data_type: BOOL
+    description: Резерв_1
+    access_level: 3
+    value: false
+  DI_bRezerv_2:
+    node_id: ns=3;s="DI_bRezerv_2"
+    data_type: BOOL
+    description: Резерв_2
+    access_level: 3
+    value: false
+  DI_bRezerv_3:
+    node_id: ns=3;s="DI_bRezerv_3"
+    data_type: BOOL
+    description: Резерв_3
+    access_level: 3
+    value: false
+  DI_bRezerv_4:
+    node_id: ns=3;s="DI_bRezerv_4"
+    data_type: BOOL
+    description: Резерв_4
+    access_level: 3
+    value: false
+  AI_TE1_GVS_Supply_iT:
+    node_id: ns=3;s="AI_TE1_GVS_Supply_iT"
+    data_type: INT
+    description: Температура в подающем трубопроводе ГВС Т3
+    access_level: 3
+    value: 0
+  AI_M21_GVS_Valve_iPos:
+    node_id: ns=3;s="AI_M21_GVS_Valve_iPos"
+    data_type: INT
+    description: Обратная связь о положении клапана ГВС
+    access_level: 3
+    value: 0
+  AI_PE1_Vent_Supply_iP:
+    node_id: ns=3;s="AI_PE1_Vent_Supply_iP"
+    data_type: INT
+    description: Давление в подающем трубопроводе вентиляции Т14
+    access_level: 3
+    value: 0
+  AI_PE2_Vent_Return_iP:
+    node_id: ns=3;s="AI_PE2_Vent_Return_iP"
+    data_type: INT
+    description: Давление в обратном трубопроводе вентиляции Т24
+    access_level: 3
+    value: 0
+  AI_QE1_Steam_iQ:
+    node_id: ns=3;s="AI_QE1_Steam_iQ"
+    data_type: INT
+    description: Объемный расход в паропроводе Т7
+    access_level: 3
+    value: 0
+  AI_TE2_Steam_iT:
+    node_id: ns=3;s="AI_TE2_Steam_iT"
+    data_type: INT
+    description: Температура в паропроводе Т7
+    access_level: 3
+    value: 0
+  AI_PE3_Steam_iP:
+    node_id: ns=3;s="AI_PE3_Steam_iP"
+    data_type: INT
+    description: Давление в паропроводе Т7
+    access_level: 3
+    value: 0
+  AI_TE3_Vent_Supply_iT:
+    node_id: ns=3;s="AI_TE3_Vent_Supply_iT"
+    data_type: INT
+    description: Температура в подающем трубопроводе вентиляции Т14
+    access_level: 3
+    value: 0
+  AI_TE4_Vent_Return_iT:
+    node_id: ns=3;s="AI_TE4_Vent_Return_iT"
+    data_type: INT
+    description: Температура в обратном трубопроводе вентиляции Т24
+    access_level: 3
+    value: 0
+  AI_TE5_TS_Supply_iT:
+    node_id: ns=3;s="AI_TE5_TS_Supply_iT"
+    data_type: INT
+    description: Температура в общем подающем трубопроводе отопления Т1
+    access_level: 3
+    value: 0
+  AI_TE6_TS_Return_iT:
+    node_id: ns=3;s="AI_TE6_TS_Return_iT"
+    data_type: INT
+    description: Температура в общем обратном трубопроводе отопления Т2
+    access_level: 3
+    value: 0
+  AI_TE7_T11_Heating_Supply_iT:
+    node_id: ns=3;s="AI_TE7_T11_Heating_Supply_iT"
+    data_type: INT
+    description: Температура подающем трубопроводе отопления Т11
+    access_level: 3
+    value: 0
+  AI_TE8_T21_Return_Return_iT:
+    node_id: ns=3;s="AI_TE8_T21_Return_Return_iT"
+    data_type: INT
+    description: Температура в обратном трубопроводе отопления Т21
+    access_level: 3
+    value: 0
+  AI_TE9_T12_Heating_Supply_iT:
+    node_id: ns=3;s="AI_TE9_T12_Heating_Supply_iT"
+    data_type: INT
+    description: Температура подающем трубопроводе отопления Т12
+    access_level: 3
+    value: 0
+  AI_TE10_T22_Return_Return_iT:
+    node_id: ns=3;s="AI_TE10_T22_Return_Return_iT"
+    data_type: INT
+    description: Температура в обратном трубопроводе отопления Т22
+    access_level: 3
+    value: 0
+  AI_TE11_T13_Heating_Supply_iT:
+    node_id: ns=3;s="AI_TE11_T13_Heating_Supply_iT"
+    data_type: INT
+    description: Температура подающем трубопроводе отопления Т13
+    access_level: 3
+    value: 0
+  AI_TE12_T23_Return_Return_iT:
+    node_id: ns=3;s="AI_TE12_T23_Return_Return_iT"
+    data_type: INT
+    description: Температура в обратном трубопроводе отопления Т23
+    access_level: 3
+    value: 0
+  AI_iRezerv_1:
+    node_id: ns=3;s="AI_iRezerv_1"
+    data_type: INT
+    description: Резерв
+    access_level: 3
+    value: 0
+  AI_iRezerv_2:
+    node_id: ns=3;s="AI_iRezerv_2"
+    data_type: INT
+    description: Резерв
+    access_level: 3
+    value: 0
+  AI_iRezerv_3:
+    node_id: ns=3;s="AI_iRezerv_3"
+    data_type: INT
+    description: Резерв
+    access_level: 3
+    value: 0
+  AI_iRezerv_4:
+    node_id: ns=3;s="AI_iRezerv_4"
+    data_type: INT
+    description: Резерв
+    access_level: 3
+    value: 0
+  AI_iRezerv_5:
+    node_id: ns=3;s="AI_iRezerv_5"
+    data_type: INT
+    description: Резерв
+    access_level: 3
+    value: 0
+  AI_iRezerv_6:
+    node_id: ns=3;s="AI_iRezerv_6"
+    data_type: INT
+    description: Резерв
+    access_level: 3
+    value: 0
+  AI_iRezerv_7:
+    node_id: ns=3;s="AI_iRezerv_7"
+    data_type: INT
+    description: Резерв
+    access_level: 3
+    value: 0
+tags_in:
+  DQ_K31_Pump_bStart:
+    node_id: ns=3;s="DQ_K31_Pump_bStart"
+    data_type: BOOL
+    description: ПУСК насоса К31
+    access_level: 3
+  DQ_K32_Pump_bStart:
+    node_id: ns=3;s="DQ_K32_Pump_bStart"
+    data_type: BOOL
+    description: ПУСК насоса К32
+    access_level: 3
+  DQ_K41_Pump_bStart:
+    node_id: ns=3;s="DQ_K41_Pump_bStart"
+    data_type: BOOL
+    description: ПУСК насоса К41
+    access_level: 3
+  DQ_K42_Pump_bStart:
+    node_id: ns=3;s="DQ_K42_Pump_bStart"
+    data_type: BOOL
+    description: ПУСК насоса К42
+    access_level: 3
+  DQ_bRezerv_1:
+    node_id: ns=3;s="DQ_bRezerv_1"
+    data_type: BOOL
+    description: Резерв_1
+    access_level: 3
+  DQ_bRezerv_2:
+    node_id: ns=3;s="DQ_bRezerv_2"
+    data_type: BOOL
+    description: Резерв_2
+    access_level: 3
+  DQ_bRezerv_3:
+    node_id: ns=3;s="DQ_bRezerv_3"
+    data_type: BOOL
+    description: Резерв_3
+    access_level: 3
+  DQ_bRezerv_4:
+    node_id: ns=3;s="DQ_bRezerv_4"
+    data_type: BOOL
+    description: Резерв_4
+    access_level: 3
+  AQ_M21_GvsValve_iPos:
+    node_id: ns=3;s="AQ_M21_GvsValve_iPos"
+    data_type: INT
+    description: Управление клапаном ГВС
+    access_level: 3
+  AQ_UF1_K41_VentPump_iF:
+    node_id: ns=3;s="AQ_UF1_K41_VentPump_iF"
+    data_type: INT
+    description: Управление частотой насоса вентиляции К41
+    access_level: 3
+  AQ_UF2_K42_VentPump_iF:
+    node_id: ns=3;s="AQ_UF2_K42_VentPump_iF"
+    data_type: INT
+    description: Управление частотой насоса вентиляции К42
+    access_level: 3
+signals:
+- type: SensorSignal
+  name: TE1_GVS_Supply_T
+  tag: AI_TE1_GVS_Supply_iT
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Температура в подающем трубопроводе ГВС Т3
+  debug: false
+- type: SensorSignal
+  name: M21_GVS_Valve_Pos
+  tag: AI_M21_GVS_Valve_iPos
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Обратная связь о положении клапана ГВС
+  debug: false
+- type: SensorSignal
+  name: PE1_Vent_Supply_P
+  tag: AI_PE1_Vent_Supply_iP
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Давление в подающем трубопроводе вентиляции Т14
+  debug: false
+- type: SensorSignal
+  name: PE2_Vent_Return_P
+  tag: AI_PE2_Vent_Return_iP
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Давление в обратном трубопроводе вентиляции Т24
+  debug: false
+- type: SensorSignal
+  name: QE1_Steam_Q
+  tag: AI_QE1_Steam_iQ
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Объемный расход в паропроводе Т7
+  debug: false
+- type: SensorSignal
+  name: TE2_Steam_T
+  tag: AI_TE2_Steam_iT
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Температура в паропроводе Т7
+  debug: false
+- type: SensorSignal
+  name: PE3_Steam_P
+  tag: AI_PE3_Steam_iP
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Давление в паропроводе Т7
+  debug: false
+- type: SensorSignal
+  name: TE3_Vent_Supply_T
+  tag: AI_TE3_Vent_Supply_iT
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Температура в подающем трубопроводе вентиляции Т14
+  debug: false
+- type: SensorSignal
+  name: TE4_Vent_Return_T
+  tag: AI_TE4_Vent_Return_iT
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Температура в обратном трубопроводе вентиляции Т24
+  debug: false
+- type: SensorSignal
+  name: TE5_TS_Supply_T
+  tag: AI_TE5_TS_Supply_iT
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Температура в общем подающем трубопроводе отопления Т1
+  debug: false
+- type: SensorSignal
+  name: TE6_TS_Return_T
+  tag: AI_TE6_TS_Return_iT
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Температура в общем обратном трубопроводе отопления Т2
+  debug: false
+- type: SensorSignal
+  name: TE7_T11_Heating_Supply_T
+  tag: AI_TE7_T11_Heating_Supply_iT
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Температура подающем трубопроводе отопления Т11
+  debug: false
+- type: SensorSignal
+  name: TE8_T21_Return_Return_T
+  tag: AI_TE8_T21_Return_Return_iT
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Температура в обратном трубопроводе отопления Т21
+  debug: false
+- type: SensorSignal
+  name: TE9_T12_Heating_Supply_T
+  tag: AI_TE9_T12_Heating_Supply_iT
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Температура подающем трубопроводе отопления Т12
+  debug: false
+- type: SensorSignal
+  name: TE10_T22_Return_Return_T
+  tag: AI_TE10_T22_Return_Return_iT
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Температура в обратном трубопроводе отопления Т22
+  debug: false
+- type: SensorSignal
+  name: TE11_T13_Heating_Supply_T
+  tag: AI_TE11_T13_Heating_Supply_iT
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Температура подающем трубопроводе отопления Т13
+  debug: false
+- type: SensorSignal
+  name: TE12_T23_Return_Return_T
+  tag: AI_TE12_T23_Return_Return_iT
+  value: 5530.0
+  min_val: 5530.0
+  max_val: 27648.0
+  period: 5.0
+  comment: Температура в обратном трубопроводе отопления Т23
+  debug: false
+- type: EngineSignal
+  name: K31
+  start_tag: DQ_K31_Pump_bStart
+  runup_time: 2.0
+  cooldown_time: 1.0
+  comment: Насос К31
+  debug: false
+- type: EngineSignal
+  name: K32
+  start_tag: DQ_K32_Pump_bStart
+  runup_time: 2.0
+  cooldown_time: 1.0
+  comment: Насос К32
+  debug: false
+- type: EngineSignal
+  name: K41
+  start_tag: DQ_K41_Pump_bStart
+  runup_time: 2.0
+  cooldown_time: 1.0
+  comment: Насос К41
+  debug: false
+- type: EngineSignal
+  name: K42
+  start_tag: DQ_K42_Pump_bStart
+  runup_time: 2.0
+  cooldown_time: 1.0
+  comment: Насос К42
+  debug: false
+- type: ValveSignal
+  name: YA1
+  open_tag: DQ_bRezerv_1
+  close_tag: DQ_bRezerv_2
+  opened_tag: DI_bRezerv_3
+  closed_tag: DI_bRezerv_4
+  local_control_tag: DI_bRezerv_1
+  remote_control_tag: DI_bRezerv_2
+  full_time: 10.0
+  comment: Клапан YA1
+  debug: false
+- type: DelaySignal
+  name: K3_DiffDelay
+  start_tag: nan
+  state_tag: DI_K3_bDiff
+  delay: 2.0
+  comment: Контроль насосов системы отопления К3
+  debug: false

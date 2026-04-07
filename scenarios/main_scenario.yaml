@@ -1,0 +1,64 @@
+name: main
+steps:
+- object: K31
+  method: mode_off
+  confirm: K31 отключен
+- object: K31
+  method: mode_local
+  confirm: K31 местный режим
+- object: K31
+  method: mode_remote
+  confirm: K31 дистанционный режим
+- object: K31
+  method: start_fail
+- object: K3_DiffDelay
+  method: set_start_tag
+  tag: DQ_K31_Pump_bStart
+- object: K32
+  method: start_normal
+- object: K3_DiffDelay
+  method: set_start_tag
+  tag: DQ_K32_Pump_bStart
+- object: h
+  method: confirm
+  confirm: K31 незапуск + K32 запуск
+- object: TE1_GVS_Supply_T
+  method: sin
+  confirm: Температура - синус
+- object: TE1_GVS_Supply_T
+  method: set_period
+  value: '30.0'
+- object: TE1_GVS_Supply_T
+  method: ramp
+  value: '10000.0'
+  confirm: Температура - линейно
+- object: YA1
+  method: mode_off
+  confirm: K31 отключен
+- object: YA1
+  method: mode_local
+  confirm: K31 местный режим
+- object: YA1
+  method: mode_remote
+  confirm: K31 дистанционный режим
+- object: h
+  method: confirm
+  confirm: YA1 Открытие
+- object: h
+  method: confirm
+  confirm: YA1 Закрытие
+- object: YA1
+  method: fail
+  confirm: YA1 Авария
+- object: opc
+  method: write
+  tag: DI_K31_bOverheating
+  value: '0.0'
+  confirm: Запись тэга
+- object: h
+  method: log
+  confirm: Просто текст
+- object: h
+  method: wait
+  value: '5.0'
+  confirm: Ожидание 5 сек
