@@ -1227,24 +1227,74 @@ steps:
 - Siemens TIA Portal (V15.1 или выше)
 - Siemens PLCSIM Advanced (поддерживает OPC UA в симуляции)
 
-## 10.2 Настройка сетевого адаптера
+## 10.2 Сетевые адреса для доступа к PLCSIM Advanced
+
+Внешний сетевой адаптер машины с PLCSIM Advanced:
+
+- IP: по настройкам внешней сети
+
+PLCSIM Virtual Ethernet Adapter:
+
+- IP: `192.168.1.1`
+- Mask: `255.255.255.0`
+- Gateway: не указывать
+
+ПЛК в TIA Portal / PLCSIM Advanced:
+
+- IP: `192.168.1.3`
+- Mask: `255.255.255.0`
+- Gateway: `192.168.1.1`
+
+### Включение маршрутизации на машине с PLCSIM Advanced
+
+Открыть PowerShell от имени администратора и выполнить:
+
+```ps
+Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters -Name IPEnableRouter -Value 1
+
+Set-NetIPInterface -InterfaceAlias "ИМЯ_ВНЕШНЕГО_ИНТЕРФЕЙСА" -AddressFamily IPv4 -Forwarding Enabled
+Set-NetIPInterface -InterfaceAlias "PLCSIM Virtual Ethernet Adapter" -AddressFamily IPv4 -Forwarding Enabled
+```
+
+После выполнения команд перезагрузить машину с PLCSIM Advanced.
+
+### Добавление маршрута на ПК с OPC UA клиентом
+
+На ПК, с которого выполняется подключение к OPC UA серверу, открыть CMD от имени администратора и выполнить:
+
+```ps
+route -p add 192.168.1.0 mask 255.255.255.0 <IP_МАШИНЫ_С_PLCSIM_ADVANCED>
+```
+
+### Проверка
+
+На ПК с OPC UA клиентом выполнить:
+
+```ps
+ping 192.168.1.1
+ping 192.168.1.3
+powershell -NoProfile -Command "Test-NetConnection 192.168.1.3 -Port 4840"
+```
+
+## 10.3 Настройка сетевого адаптера
 
 После установки PLCSIM Advanced в системе появится виртуальный адаптер **Siemens PLCSIM Virtual Ethernet Adapter**.
 
 1. Откройте **Панель управления → Сетевые подключения**
 2. Выберите адаптер → **Свойства → IP версии 4 (TCP/IPv4)**
 3. Задайте IP-адрес из той же подсети, что и у ПЛК:
-   - ПЛК: `192.168.0.1`
-   - Адаптер: `192.168.0.100`
+   - ПЛК: `192.168.1.3`
+   - Адаптер: `192.168.1.1`
 4. Маска подсети: `255.255.255.0`
 
-## 10.3 Настройка проекта в TIA Portal
+## 10.4 Настройка проекта в TIA Portal
 
 ### IP-адрес ПЛК
 
 1. В конфигурации устройства выберите ПЛК
 2. В инспекторе свойств откройте раздел **Ethernet-адреса**
-3. Задайте IP: `192.168.0.1`
+3. Задайте IP: `192.168.1.3`
+4. Задайте шлюз: `192.168.1.1`
 
 ### Включение OPC UA сервера
 
@@ -1278,28 +1328,28 @@ steps:
 3. Активируйте:
    - Support simulation during block compilation
 
-## 10.4 Настройка PLCSIM Advanced
+## 10.5 Настройка PLCSIM Advanced
 
 1. Запустите **Siemens PLCSIM Advanced**
 2. В окне настроек укажите:
    - Online Access: `TCP/IP Single Adapter`
    - TCP/IP Communication with: `Ethernet`
    - Instance name: `MySimulation`
-   - IP address / Subnet mask: `192.168.0.1 / 255.255.255.0`
+   - IP address / Subnet mask: `192.168.1.3 / 255.255.255.0 / 192.168.1.1`
 3. Нажмите **Start**
 
-## 10.5 Загрузка проекта
+## 10.6 Загрузка проекта
 
 1. В TIA Portal выберите проект → **Download to device**
 2. В поле PG/PC interface выберите **PLCSIM Virtual Ethernet Adapter**
 3. Загрузите проект
 
-## 10.6 Проверка подключения (UaExpert)
+## 10.7 Проверка подключения (UaExpert)
 
 1. Запустите **UaExpert**
 2. Откройте **Project → Servers → ПКМ → Add**
 3. На вкладке **Advanced** вставьте endpoint:
-   - `opc.tcp://192.168.0.1:4840`
+   - `opc.tcp://192.168.1.3:4840`
 4. Нажмите **OK**
 5. При первом подключении подтвердите сертификат
 
